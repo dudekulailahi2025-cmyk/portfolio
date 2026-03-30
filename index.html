@@ -7,69 +7,130 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
-* { margin:0; padding:0; box-sizing:border-box; font-family:'Segoe UI', sans-serif; }
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif;}
 
-body {
-  background: linear-gradient(135deg, #0f172a, #1e293b);
-  color: white;
+body{
+  background:#0f172a;
+  color:white;
 }
 
 /* NAV */
-nav {
-  position: sticky;
-  top: 0;
-  display: flex;
-  justify-content: space-between;
-  padding: 15px 10%;
-  background: rgba(255,255,255,0.05);
-  backdrop-filter: blur(10px);
+nav{
+  position:sticky;
+  top:0;
+  display:flex;
+  justify-content:space-between;
+  padding:15px 10%;
+  background:rgba(255,255,255,0.05);
+  backdrop-filter:blur(10px);
+}
+nav h1{color:#d4a017;}
+
+/* COVER */
+.cover{
+  position:relative;
+  background:#1e2b4a;
+  padding:90px 10%;
+  min-height:100vh;
+  overflow:hidden;
 }
 
-nav h1 { color: #38bdf8; }
+/* GOLD CIRCLES */
+.circle1,.circle2{
+  position:absolute;
+  border:2px solid #d4a017;
+  border-radius:50%;
+}
+.circle1{
+  width:320px;height:320px;right:-120px;top:-120px;
+}
+.circle2{
+  width:220px;height:220px;left:-90px;bottom:-90px;
+}
 
-/* HERO */
-.hero { text-align:center; padding:100px 20px; }
-.hero h1 { font-size:50px; }
+/* TEXT */
+.badge{
+  background:#d4a017;color:black;
+  padding:6px 12px;
+  display:inline-block;
+  margin-bottom:20px;
+}
+.cover h1{font-size:52px;}
+.subtitle{color:#cbd5f5;margin-top:10px;}
+
+.line{
+  width:70px;height:3px;
+  background:#d4a017;
+  margin:25px 0;
+}
+
+/* DETAILS */
+.details{
+  display:flex;
+  justify-content:space-between;
+  margin-top:40px;
+  gap:80px;
+  line-height:1.8;
+}
+.details span{
+  font-size:12px;
+  color:#9aa5c3;
+}
+.details p{
+  margin-bottom:25px;
+}
 
 /* SECTION */
-.section { padding:60px 10%; }
-.section h2 { color:#38bdf8; margin-bottom:20px; }
+.section{
+  padding:70px 10%;
+}
+.section h2{
+  color:#d4a017;
+  margin-bottom:25px;
+}
 
 /* CARD */
-.card {
-  background: rgba(255,255,255,0.05);
-  padding:20px;
-  margin:15px 0;
-  border-radius:10px;
+.card{
+  background:rgba(255,255,255,0.05);
+  padding:25px;
+  margin:20px 0;
+  border-radius:12px;
   transition:0.4s;
 }
-.card:hover { transform:translateY(-5px); }
+.card:hover{
+  transform:translateY(-6px) scale(1.01);
+}
 
 /* SKILLS */
-.skills span {
-  display:inline-block;
-  background:#38bdf8;
+.skills span{
+  background:#d4a017;
   color:black;
-  padding:6px 12px;
+  padding:8px 14px;
   margin:6px;
+  display:inline-block;
   border-radius:5px;
 }
 
-/* ICON */
-.icon { margin-right:10px; color:#38bdf8; }
+/* LIST */
+ul{
+  padding-left:20px;
+}
+ul li{
+  margin-bottom:10px;
+}
 
 /* ANIMATION */
-.hidden {
+.hidden{
   opacity:0;
   transform:translateY(40px);
   transition:1s;
 }
-.show {
+.show{
   opacity:1;
   transform:translateY(0);
 }
 
-footer {
+footer{
   text-align:center;
   padding:30px;
 }
@@ -79,42 +140,70 @@ footer {
 <body>
 
 <nav>
-  <h1><i class="fa-solid fa-code"></i> Ilahi</h1>
-  <div><i class="fa-solid fa-envelope"></i> dudekulailahi987@gmail.com</div>
+<h1><i class="fa-solid fa-code"></i> Ilahi</h1>
+<div><i class="fa-solid fa-envelope"></i> dudekulailahi987@gmail.com</div>
 </nav>
 
-<div class="hero hidden">
-  <h1>Dudekula Ilahi</h1>
-  <p>B.Tech CSE (AI & Data Engineering) — VIT Vellore</p>
+<!-- COVER -->
+<div class="cover hidden">
+
+<div class="circle1"></div>
+<div class="circle2"></div>
+
+<div class="badge">ACADEMIC PORTFOLIO</div>
+
+<h1>Dudekula Ilahi</h1>
+
+<p class="subtitle">
+B.Tech Computer Science Engineering — Vellore Institute of Technology
+</p>
+
+<div class="line"></div>
+
+<div class="details">
+
+<div>
+<p><span>REGISTER NUMBER</span><br>25BDE0057</p>
+<p><span>FACULTY</span><br>Yadamala Sreenivasulu</p>
+<p><span>TOPIC</span><br>Creating a Portfolio</p>
 </div>
 
-<!-- TABLE OF CONTENTS -->
+<div>
+<p><span>COURSE</span><br>BAENG101 – Technical English Communication</p>
+<p><span>CLASS / SECTION</span><br>Semester II, 2025–26</p>
+</div>
+
+</div>
+
+</div>
+
+<!-- TABLE -->
 <div class="section hidden">
-<h2><i class="fa-solid fa-list"></i> Table of Contents</h2>
+<h2>Table of Contents</h2>
 <div class="card">
-<ul style="line-height:2;">
-<li>1. About Me</li>
-<li>2. Background & Experience</li>
-<li>3. Skills</li>
-<li>4. Projects</li>
-<li>5. Achievements</li>
-<li>6. Reflection</li>
-<li>7. Conclusion</li>
+<ul>
+<li>About Me</li>
+<li>Background & Experience</li>
+<li>Skills</li>
+<li>Projects</li>
+<li>Achievements</li>
+<li>Reflection</li>
+<li>Conclusion</li>
 </ul>
 </div>
 </div>
 
 <!-- ABOUT -->
 <div class="section hidden">
-<h2><i class="fa-solid fa-user"></i> About Me</h2>
+<h2>About Me</h2>
 <div class="card">
-I am a second-semester B.Tech student in Computer Science with a specialization in Artificial Intelligence and Data Engineering at VIT Vellore. I have a strong academic background, highlighted by securing a 97.8 percentile in JEE Main and achieving a State 3rd Rank in my 10th grade.
+I am a second-semester B.Tech student in Computer Science with a specialization in Artificial Intelligence and Data Engineering at VIT Vellore. I have a strong academic background, highlighted by securing a 97.8 percentile in JEE Main and achieving a State 3rd Rank in my 10th grade. I am passionate about building strong programming fundamentals, particularly in Data Structures and Algorithms, while exploring interdisciplinary applications across artificial intelligence, data engineering, and electronics.
 </div>
 </div>
 
 <!-- BACKGROUND -->
 <div class="section hidden">
-<h2><i class="fa-solid fa-graduation-cap"></i> Background & Experience</h2>
+<h2>Background & Experience</h2>
 <div class="card">
 Currently pursuing my undergraduate studies at VIT Vellore, I am developing core competencies in programming, object-oriented concepts, and problem-solving. My academic journey is supported by strong performance in competitive and school-level examinations, including a high percentile in JEE Main and a state-level rank in 10th grade. As a second-semester student, I am actively strengthening my understanding of computer science fundamentals while exploring emerging domains such as artificial intelligence and data engineering. I aim to gain practical experience through projects and hands-on learning.
 </div>
@@ -122,58 +211,46 @@ Currently pursuing my undergraduate studies at VIT Vellore, I am developing core
 
 <!-- SKILLS -->
 <div class="section hidden">
-<h2><i class="fa-solid fa-tools"></i> Skills</h2>
+<h2>Skills</h2>
 <div class="skills">
-<span>C++</span><span>Python</span><span>DSA</span>
+<span>C++</span><span>Python</span><span>Data Structures & Algorithms</span>
 <span>OOP</span><span>Problem Solving</span>
-<span>Octave</span><span>Multisim</span>
-<span>OrCAD</span><span>Fusion 360</span>
+<span>Octave</span><span>Multisim</span><span>OrCAD</span><span>Fusion 360</span>
 </div>
 </div>
 
 <!-- PROJECTS -->
 <div class="section hidden">
-<h2><i class="fa-solid fa-diagram-project"></i> Projects</h2>
-
-<div class="card"><i class="fa-solid fa-book icon"></i><b>Library Management System</b><br>C++ OOP + File Handling</div>
-
-<div class="card"><i class="fa-solid fa-heart-pulse icon"></i><b>ECG Monitoring System</b><br>Electronics + Signal Processing</div>
-
-<div class="card"><i class="fa-solid fa-wave-square icon"></i><b>Vector Field Analysis</b><br>Octave Simulation</div>
-
-<div class="card"><i class="fa-solid fa-microchip icon"></i><b>Digital Logic Design</b><br>Logic Circuits + K-map</div>
-
-<div class="card"><i class="fa-solid fa-bolt icon"></i><b>Flip-Flop Simulation</b><br>Sequential Circuits</div>
-
-<div class="card"><i class="fa-solid fa-drafting-compass icon"></i><b>Engineering Drawing</b><br>Fusion 360 CAD</div>
-
-<div class="card"><i class="fa-solid fa-flask icon"></i><b>Computational Chemistry</b><br>Scientific Analysis</div>
-
+<h2>Projects</h2>
+<div class="card">Library Management System (C++)</div>
+<div class="card">ECG Monitoring System</div>
+<div class="card">Vector Field Analysis using Octave</div>
+<div class="card">Digital Logic Design (Multisim)</div>
+<div class="card">Flip-Flop Simulation</div>
+<div class="card">Engineering Drawing (Fusion 360)</div>
+<div class="card">Computational Chemistry Case Study</div>
 </div>
 
 <!-- ACHIEVEMENTS -->
 <div class="section hidden">
-<h2><i class="fa-solid fa-trophy"></i> Achievements</h2>
+<h2>Achievements</h2>
 <div class="card">97.8 Percentile in JEE Main</div>
-<div class="card">State 3rd Rank in 10th</div>
+<div class="card">State 3rd Rank in 10th (APRSIE)</div>
 </div>
 
 <!-- REFLECTION -->
 <div class="section hidden">
-<h2><i class="fa-solid fa-lightbulb"></i> Reflection</h2>
+<h2>Reflection</h2>
 <div class="card">
-This portfolio reflects my academic journey and development in programming, data structures, and engineering concepts. I have gained exposure to multiple domains including electronics, simulation, and computational tools. I aim to strengthen my skills in AI, data analysis, and real-world problem solving.
+This portfolio reflects my academic journey and the development of my technical and analytical skills as a second-semester engineering student. Through various projects and coursework, I have gained exposure to programming, data structures, electronics, and computational tools. I have understood the importance of applying theoretical concepts in practical scenarios, which has strengthened my problem-solving abilities. This process has also improved my ability to present information in a structured and professional manner. Moving forward, I aim to enhance my skills in Python, data analysis, and artificial intelligence while working on more real-world projects.
 </div>
 </div>
 
 <!-- CONCLUSION -->
 <div class="section hidden">
-<h2><i class="fa-solid fa-flag-checkered"></i> Conclusion</h2>
+<h2>Conclusion</h2>
 <div class="card">
-This portfolio presents a comprehensive overview of my academic journey, technical skills, and interdisciplinary learning experiences as a second-semester engineering student. It highlights my foundation in programming, data structures, digital electronics, and computational tools.
-
-I aim to further strengthen my skills in Python, artificial intelligence, and data analysis through continuous learning and practical implementation.
-
+This portfolio provides a comprehensive overview of my academic achievements, technical skills, and learning experiences. It demonstrates my strong foundation in programming, data structures, and engineering concepts along with my ability to apply them through practical work. The portfolio also highlights my interdisciplinary exposure across domains such as electronics, computational analysis, and design. I am committed to continuous learning and improvement, and I aim to further develop my expertise in artificial intelligence and data engineering to contribute effectively to real-world technological solutions.
 <br><br>
 <b>Email:</b> dudekulailahi987@gmail.com<br>
 <b>Register No:</b> 25BDE0057<br>
@@ -186,15 +263,12 @@ Dudekula Ilahi | VIT Vellore | 25BDE0057
 </footer>
 
 <script>
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if(entry.isIntersecting){
-      entry.target.classList.add('show');
-    }
-  });
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){entry.target.classList.add('show');}
 });
-
-document.querySelectorAll('.hidden').forEach(el => observer.observe(el));
+});
+document.querySelectorAll('.hidden').forEach(el=>observer.observe(el));
 </script>
 
 </body>
