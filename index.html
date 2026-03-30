@@ -9,131 +9,121 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif;}
 
-body{
-  background:#0f172a;
-  color:white;
-}
+body{background:#0f172a;color:white;}
 
 /* NAV */
 nav{
-  position:sticky;
-  top:0;
-  display:flex;
-  justify-content:space-between;
-  padding:15px 10%;
-  background:rgba(255,255,255,0.05);
-  backdrop-filter:blur(10px);
+position:sticky;top:0;
+display:flex;justify-content:space-between;
+padding:15px 10%;
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(10px);
 }
 nav h1{color:#d4a017;}
 
 /* COVER */
 .cover{
-  position:relative;
-  background:#1e2b4a;
-  padding:90px 10%;
-  min-height:100vh;
-  overflow:hidden;
+position:relative;
+background:#1e2b4a;
+padding:90px 10%;
+min-height:100vh;
+overflow:hidden;
 }
 
 /* GOLD CIRCLES */
 .circle1,.circle2{
-  position:absolute;
-  border:2px solid #d4a017;
-  border-radius:50%;
+position:absolute;
+border:2px solid #d4a017;
+border-radius:50%;
 }
-.circle1{
-  width:320px;height:320px;right:-120px;top:-120px;
-}
-.circle2{
-  width:220px;height:220px;left:-90px;bottom:-90px;
+.circle1{width:320px;height:320px;right:-120px;top:-120px;}
+.circle2{width:220px;height:220px;left:-90px;bottom:-90px;}
+
+.badge{
+background:#d4a017;color:black;
+padding:6px 12px;
+display:inline-block;
+margin-bottom:20px;
 }
 
-/* TEXT */
-.badge{
-  background:#d4a017;color:black;
-  padding:6px 12px;
-  display:inline-block;
-  margin-bottom:20px;
-}
 .cover h1{font-size:52px;}
 .subtitle{color:#cbd5f5;margin-top:10px;}
 
 .line{
-  width:70px;height:3px;
-  background:#d4a017;
-  margin:25px 0;
+width:70px;height:3px;
+background:#d4a017;
+margin:25px 0;
 }
 
 /* DETAILS */
 .details{
-  display:flex;
-  justify-content:space-between;
-  margin-top:40px;
-  gap:80px;
-  line-height:1.8;
-}
-.details span{
-  font-size:12px;
-  color:#9aa5c3;
-}
-.details p{
-  margin-bottom:25px;
+display:flex;
+justify-content:space-between;
+margin-top:40px;
+gap:80px;
+line-height:1.8;
 }
 
+.details span{font-size:12px;color:#9aa5c3;}
+.details p{margin-bottom:25px;}
+
 /* SECTION */
-.section{
-  padding:70px 10%;
-}
-.section h2{
-  color:#d4a017;
-  margin-bottom:25px;
-}
+.section{padding:70px 10%;}
+.section h2{color:#d4a017;margin-bottom:25px;}
 
 /* CARD */
 .card{
-  background:rgba(255,255,255,0.05);
-  padding:25px;
-  margin:20px 0;
-  border-radius:12px;
-  transition:0.4s;
+background:rgba(255,255,255,0.05);
+padding:25px;
+margin:20px 0;
+border-radius:12px;
+transition:0.4s;
 }
-.card:hover{
-  transform:translateY(-6px) scale(1.01);
-}
+.card:hover{transform:translateY(-6px);}
 
 /* SKILLS */
 .skills span{
-  background:#d4a017;
-  color:black;
-  padding:8px 14px;
-  margin:6px;
-  display:inline-block;
-  border-radius:5px;
+background:#d4a017;
+color:black;
+padding:8px 14px;
+margin:6px;
+display:inline-block;
+border-radius:5px;
 }
 
 /* LIST */
-ul{
-  padding-left:20px;
-}
-ul li{
-  margin-bottom:10px;
-}
+ul{padding-left:20px;}
+ul li{margin-bottom:10px;}
 
 /* ANIMATION */
 .hidden{
-  opacity:0;
-  transform:translateY(40px);
-  transition:1s;
+opacity:0;
+transform:translateY(40px);
+transition:1s;
 }
 .show{
-  opacity:1;
-  transform:translateY(0);
+opacity:1;
+transform:translateY(0);
 }
 
-footer{
-  text-align:center;
-  padding:30px;
+/* CONCLUSION */
+.conclusion-section{text-align:center;}
+.conclusion-section h2{color:#d4a017;margin-bottom:40px;}
+
+.conclusion-grid{
+display:flex;
+justify-content:space-around;
+margin-bottom:40px;
+flex-wrap:wrap;
 }
+
+.conclusion-section span{
+color:#d4a017;
+font-size:12px;
+letter-spacing:2px;
+}
+
+footer{text-align:center;padding:30px;}
 </style>
 </head>
 
@@ -197,7 +187,7 @@ B.Tech Computer Science Engineering — Vellore Institute of Technology
 <div class="section hidden">
 <h2>About Me</h2>
 <div class="card">
-I am a second-semester B.Tech student in Computer Science with a specialization in Artificial Intelligence and Data Engineering at VIT Vellore. I have a strong academic background, highlighted by securing a 97.8 percentile in JEE Main and achieving a State 3rd Rank in my 10th grade. I am passionate about building strong programming fundamentals, particularly in Data Structures and Algorithms, while exploring interdisciplinary applications across artificial intelligence, data engineering, and electronics.
+I am a second-semester B.Tech student in Computer Science with a specialization in Artificial Intelligence and Data Engineering at VIT Vellore. I have a strong academic background, highlighted by securing a 97.8 percentile in JEE Main and achieving a State 3rd Rank in my 10th grade. I am passionate about building strong programming fundamentals with a focus on Data Structures and Algorithms, while also exploring interdisciplinary domains such as artificial intelligence, data engineering, and electronics.
 </div>
 </div>
 
@@ -223,11 +213,11 @@ Currently pursuing my undergraduate studies at VIT Vellore, I am developing core
 <div class="section hidden">
 <h2>Projects</h2>
 <div class="card">Library Management System (C++)</div>
-<div class="card">ECG Monitoring System</div>
+<div class="card">ECG Monitoring System (Multidisciplinary Project)</div>
 <div class="card">Vector Field Analysis using Octave</div>
-<div class="card">Digital Logic Design (Multisim)</div>
-<div class="card">Flip-Flop Simulation</div>
-<div class="card">Engineering Drawing (Fusion 360)</div>
+<div class="card">Digital Logic Design using Multisim</div>
+<div class="card">Flip-Flop Simulation (Sequential Circuits)</div>
+<div class="card">Engineering Drawing using Fusion 360</div>
 <div class="card">Computational Chemistry Case Study</div>
 </div>
 
@@ -235,14 +225,14 @@ Currently pursuing my undergraduate studies at VIT Vellore, I am developing core
 <div class="section hidden">
 <h2>Achievements</h2>
 <div class="card">97.8 Percentile in JEE Main</div>
-<div class="card">State 3rd Rank in 10th (APRSIE)</div>
+<div class="card">State 3rd Rank in 10th grade (APRSIE)</div>
 </div>
 
 <!-- REFLECTION -->
 <div class="section hidden">
 <h2>Reflection</h2>
 <div class="card">
-This portfolio reflects my academic journey and the development of my technical and analytical skills as a second-semester engineering student. Through various projects and coursework, I have gained exposure to programming, data structures, electronics, and computational tools. I have understood the importance of applying theoretical concepts in practical scenarios, which has strengthened my problem-solving abilities. This process has also improved my ability to present information in a structured and professional manner. Moving forward, I aim to enhance my skills in Python, data analysis, and artificial intelligence while working on more real-world projects.
+This portfolio reflects my academic journey and the development of my technical, analytical, and problem-solving skills as a second-semester engineering student. Through various coursework and projects, I have gained exposure to programming, data structures, electronics, and computational tools. I have realized the importance of applying theoretical knowledge to practical problems, which has helped me better understand core concepts. Creating this portfolio has also improved my ability to organize and present information in a clear and professional manner. Moving forward, I aim to strengthen my skills in Python, data analysis, and artificial intelligence while working on more real-world projects.
 </div>
 </div>
 
@@ -250,12 +240,41 @@ This portfolio reflects my academic journey and the development of my technical 
 <div class="section hidden">
 <h2>Conclusion</h2>
 <div class="card">
-This portfolio provides a comprehensive overview of my academic achievements, technical skills, and learning experiences. It demonstrates my strong foundation in programming, data structures, and engineering concepts along with my ability to apply them through practical work. The portfolio also highlights my interdisciplinary exposure across domains such as electronics, computational analysis, and design. I am committed to continuous learning and improvement, and I aim to further develop my expertise in artificial intelligence and data engineering to contribute effectively to real-world technological solutions.
-<br><br>
-<b>Email:</b> dudekulailahi987@gmail.com<br>
-<b>Register No:</b> 25BDE0057<br>
-<b>Institution:</b> VIT Vellore
+This portfolio provides a comprehensive overview of my academic progress, technical skills, and learning experiences. It demonstrates my strong foundation in programming, data structures, and engineering concepts, along with my ability to apply them through practical projects. It also highlights my interdisciplinary exposure across domains such as electronics, computational analysis, and design. I am committed to continuous learning and improvement, and I aim to further develop my expertise in artificial intelligence and data engineering to contribute effectively to real-world technological solutions.
 </div>
+</div>
+
+<!-- FINAL THANK YOU -->
+<div class="section hidden conclusion-section">
+
+<h2>Thank you for taking the time to review my portfolio.</h2>
+
+<div class="conclusion-grid">
+<div>
+<span>EMAIL</span>
+<p>dudekulailahi987@gmail.com</p>
+</div>
+
+<div>
+<span>REGISTER NO.</span>
+<p>25BDE0057</p>
+</div>
+
+<div>
+<span>PROGRAMME</span>
+<p>B.Tech CSE (AI & Data Engineering), VIT Vellore</p>
+</div>
+</div>
+
+<div>
+<span>GITHUB</span>
+<p>
+<a href="https://github.com/dudekulailahi2025-cmyk" target="_blank" style="color:white;">
+github.com/dudekulailahi2025-cmyk
+</a>
+</p>
+</div>
+
 </div>
 
 <footer>
